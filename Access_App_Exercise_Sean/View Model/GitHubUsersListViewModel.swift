@@ -10,7 +10,7 @@ import Foundation
 
 class GitHubUsersListViewModel {
     
-    var users: [GitHubUser]?
+    var users: [GitHubUser] = []
     
     func fetchAllUsers() {
         

@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="236" id="mRe-i0-G8Z">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GitHubUsersListCell" rowHeight="236" id="mRe-i0-G8Z" customClass="GitHubUsersListCell" customModule="Access_App_Exercise_Sean" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mRe-i0-G8Z" id="B5Y-bz-sfb">
@@ -77,6 +77,13 @@
                     <constraint firstItem="6Vd-00-gOc" firstAttribute="centerX" secondItem="B5Y-bz-sfb" secondAttribute="centerX" id="yAf-8i-VfJ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatar" destination="t6f-qR-9or" id="JRf-68-q80"/>
+                <outlet property="jobTitleLabel" destination="Cz5-Dd-lmR" id="LdD-ue-Jgg"/>
+                <outlet property="jobTitleLabelHeightConstraint" destination="WHL-MN-Tnk" id="vKI-gU-bii"/>
+                <outlet property="jobTitleLabelTopDistanceConstraint" destination="bv3-nk-amw" id="Pji-CN-9C7"/>
+                <outlet property="nameLabel" destination="Zb5-z5-o49" id="HDV-rg-y6T"/>
+            </connections>
             <point key="canvasLocation" x="111.59420289855073" y="-6.0267857142857144"/>
         </tableViewCell>
     </objects>

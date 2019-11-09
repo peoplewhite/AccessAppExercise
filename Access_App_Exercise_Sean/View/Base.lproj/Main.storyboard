@@ -11,7 +11,7 @@
         <!--GitHubUsersList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="GitHubUsersList" id="BYZ-38-t0r" customClass="ViewController" customModule="Access_App_Exercise_Sean" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GitHubUsersList" id="BYZ-38-t0r" customClass="GitHubUsersListViewController" customModule="Access_App_Exercise_Sean" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6zc-t3-KLT" id="7jJ-cR-JS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
