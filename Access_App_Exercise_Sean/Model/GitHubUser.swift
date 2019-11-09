@@ -7,13 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct GitHubUser {
     let avatarUrlString: String
-    let name: String
-    let jobTitle: String?
+    let login: String
+    let isSiteAdmin: Bool
     
     var avatarUrl: URL? {
         return URL(string: avatarUrlString)
+    }
+    
+    init(json: JSON) {
+        self.avatarUrlString = json["avatar_url"].stringValue
+        self.login = json["login"].stringValue
+        self.isSiteAdmin = json["site_admin"].boolValue
     }
 }

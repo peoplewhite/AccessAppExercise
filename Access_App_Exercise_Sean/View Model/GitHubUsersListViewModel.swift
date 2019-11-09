@@ -11,8 +11,13 @@ import Foundation
 class GitHubUsersListViewModel {
     
     var users: [GitHubUser] = []
-    
-    func fetchAllUsers() {
         
+    func fetchAllUsers(completion: @escaping () -> (Void)) {
+        API.fetchGitHubAllUsers(succeed: { (users) in
+            self.users = users
+            completion()
+        }) { (errorMessage) in
+            //
+        }
     }
 }
