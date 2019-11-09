@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.9.1)
   - DynamicColor (4.2.0)
+  - Kingfisher (5.9.0):
+    - Kingfisher/Core (= 5.9.0)
+  - Kingfisher/Core (5.9.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -13,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DynamicColor (~> 4.2.0)
+  - Kingfisher
   - Moya
   - PKHUD (~> 5.0)
   - SwiftyJSON (~> 4.0)
@@ -21,6 +25,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DynamicColor
+    - Kingfisher
     - Moya
     - PKHUD
     - Result
@@ -29,11 +34,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   DynamicColor: c475f66bda1cabf602f2c54ac1171c0c07148a5a
+  Kingfisher: ff98240aebb7302bdc4f1ecd701761030ce18b16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: e2905131b43f3e7c5cafea6a761f59a0aa41bc69
+PODFILE CHECKSUM: 03273f7d8fe841a3abddf43987620fee01ec3b99
 
 COCOAPODS: 1.8.4
