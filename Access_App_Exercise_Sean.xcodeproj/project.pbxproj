@@ -15,6 +15,8 @@
 		201D0AF0237650C900B4200F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201D0AEE237650C900B4200F /* LaunchScreen.storyboard */; };
 		20F7B428237659E4008C781B /* GitHubUsersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7B427237659E4008C781B /* GitHubUsersListCell.xib */; };
 		20F7B42A23765DDE008C781B /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B42923765DDE008C781B /* GitHubUser.swift */; };
+		20F7B43023765F9F008C781B /* GitHubUsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B42F23765F9F008C781B /* GitHubUsersListViewModel.swift */; };
+		20F7B43223766033008C781B /* GitHubUsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B43123766033008C781B /* GitHubUsersListCellViewModel.swift */; };
 		9101B8798B6810251AC6F2DB /* Pods_Access_App_Exercise_Sean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B416F8A5D4AF64B5E651D /* Pods_Access_App_Exercise_Sean.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		201D0AF1237650C900B4200F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F7B427237659E4008C781B /* GitHubUsersListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubUsersListCell.xib; sourceTree = "<group>"; };
 		20F7B42923765DDE008C781B /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
+		20F7B42F23765F9F008C781B /* GitHubUsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersListViewModel.swift; sourceTree = "<group>"; };
+		20F7B43123766033008C781B /* GitHubUsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersListCellViewModel.swift; sourceTree = "<group>"; };
 		35A849F92A065E49CFD6C9D3 /* Pods-Access_App_Exercise_Sean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Access_App_Exercise_Sean.debug.xcconfig"; path = "Target Support Files/Pods-Access_App_Exercise_Sean/Pods-Access_App_Exercise_Sean.debug.xcconfig"; sourceTree = "<group>"; };
 		63DA3078585095AF50F0A25B /* Pods-Access_App_Exercise_Sean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Access_App_Exercise_Sean.release.xcconfig"; path = "Target Support Files/Pods-Access_App_Exercise_Sean/Pods-Access_App_Exercise_Sean.release.xcconfig"; sourceTree = "<group>"; };
 		E05B416F8A5D4AF64B5E651D /* Pods_Access_App_Exercise_Sean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Access_App_Exercise_Sean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +104,8 @@
 		20F7B42D23765ED4008C781B /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				20F7B42F23765F9F008C781B /* GitHubUsersListViewModel.swift */,
+				20F7B43123766033008C781B /* GitHubUsersListCellViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -248,6 +254,8 @@
 				201D0AE8237650C700B4200F /* GitHubUsersListViewController.swift in Sources */,
 				20F7B42A23765DDE008C781B /* GitHubUser.swift in Sources */,
 				201D0AE4237650C700B4200F /* AppDelegate.swift in Sources */,
+				20F7B43023765F9F008C781B /* GitHubUsersListViewModel.swift in Sources */,
+				20F7B43223766033008C781B /* GitHubUsersListCellViewModel.swift in Sources */,
 				201D0AE6237650C700B4200F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
