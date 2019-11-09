@@ -36,10 +36,11 @@ extension API {
         
         Alamofire.request(url, method: .get)
             .validate(statusCode: 200..<299)
-            .responseJSON { response in                
+            .responseJSON { response in
                 switch response.result {
                 case .success(let data):
                     guard let values = data as? [Any] else { return }
+                    print(values)
                     let users = values.map { GitHubUser(json: JSON($0)) }
                     succeed(users)
                     break

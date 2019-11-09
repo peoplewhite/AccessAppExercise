@@ -34,19 +34,17 @@ class GitHubUsersListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupAvatarCircularShaped()
     }
-
+    func setupAvatarCircularShaped() {
+        avatar.layer.cornerRadius = avatar.frame.height / 2.0
+    }
     func setupModel(user: GitHubUser) {
         self.user = user
-        
-        
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
     }
-    
 }
 private extension GitHubUsersListCell {
     func setupJobTitle(title: String?) {
