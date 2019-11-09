@@ -12,12 +12,12 @@ class GitHubUsersListViewModel {
     
     var users: [GitHubUser] = []
         
-    func fetchAllUsers(completion: @escaping () -> (Void)) {
+    func fetchAllUsers(completion: @escaping (_ errorMessage: String?) -> (Void)) {
         API.fetchGitHubAllUsers(succeed: { (users) in
             self.users = users
-            completion()
+            completion(nil)
         }) { (errorMessage) in
-            //
+            completion(errorMessage)
         }
     }
 }

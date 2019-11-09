@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class GitHubUsersListViewController: UIViewController {
 
@@ -22,7 +23,14 @@ class GitHubUsersListViewController: UIViewController {
     }
     
     func callAPIToFetchGitHubAllUsers() {
-        gitHubUserListViewModel.fetchAllUsers { [weak self] in
+        HUD.show(.progress, onView: view)
+        gitHubUserListViewModel.fetchAllUsers { [weak self] (errorMessage) in
+            // TODO: handle error message case
+            if let _ = errorMessage {
+                HUD.flash(.error, onView: self?.view)
+                return
+            }
+            HUD.hide()
             self?.tableView.reloadData()
         }
     }
