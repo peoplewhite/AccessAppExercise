@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GitHubUsersListCell: UITableViewCell {
 
@@ -14,7 +15,12 @@ class GitHubUsersListCell: UITableViewCell {
         didSet {
             
             guard let _user = user else { return }
-            // TODO: handle avatar image url
+            if let avatarUrl = _user.avatarUrl {
+                avatar.kf.setImage(with: avatarUrl)
+            } else {
+                avatar.image = nil
+            }
+
             nameLabel.text = _user.name
             
             setupJobTitle(title: _user.jobTitle)

@@ -9,7 +9,11 @@
 import Foundation
 
 struct GitHubUser {
-    let avatarUrl: String
+    let avatarUrlString: String
     let name: String
     let jobTitle: String?
+    
+    var avatarUrl: URL? {
+        return URL(string: avatarUrlString)
+    }
 }
