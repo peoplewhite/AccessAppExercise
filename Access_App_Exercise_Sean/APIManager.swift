@@ -2,7 +2,7 @@
 //  APIManager.swift
 //  Access_App_Exercise_Sean
 //
-//  Created by KimuraSean on 2019/11/9.
+//  Created by sean on 2019/11/9.
 //  Copyright © 2019 sean. All rights reserved.
 //
 
@@ -39,8 +39,7 @@ extension API {
             .responseJSON { response in
                 switch response.result {
                 case .success(let data):
-                    guard let values = data as? [Any] else { return }
-                    print(values)
+                    guard let values = data as? [Any] else { return }                   
                     let users = values.map { GitHubUser(json: JSON($0)) }
                     succeed(users)
                     break

@@ -38,24 +38,24 @@
                                         <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-Dd-lmR" userLabel="jobTitle">
-                                        <rect key="frame" x="0.0" y="25" width="286" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  STAFF  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-Dd-lmR" userLabel="jobTitle">
+                                        <rect key="frame" x="0.0" y="25" width="67" height="0.0"/>
+                                        <color key="backgroundColor" red="0.35686274509803922" green="0.40392156862745099" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="WHL-MN-Tnk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Zb5-z5-o49" firstAttribute="top" secondItem="vQX-4f-FDi" secondAttribute="top" id="2Fx-aN-2Vs"/>
-                                    <constraint firstItem="Cz5-Dd-lmR" firstAttribute="width" secondItem="vQX-4f-FDi" secondAttribute="width" id="870-it-nlv"/>
-                                    <constraint firstItem="Cz5-Dd-lmR" firstAttribute="centerX" secondItem="vQX-4f-FDi" secondAttribute="centerX" id="DyA-AR-iwR"/>
                                     <constraint firstAttribute="bottom" secondItem="Cz5-Dd-lmR" secondAttribute="bottom" id="IFp-wS-w9m"/>
                                     <constraint firstItem="Cz5-Dd-lmR" firstAttribute="top" secondItem="Zb5-z5-o49" secondAttribute="bottom" constant="5" id="bv3-nk-amw"/>
                                     <constraint firstItem="Zb5-z5-o49" firstAttribute="centerX" secondItem="vQX-4f-FDi" secondAttribute="centerX" id="eYk-sf-gqy"/>
+                                    <constraint firstItem="Cz5-Dd-lmR" firstAttribute="leading" secondItem="Zb5-z5-o49" secondAttribute="leading" id="i9i-FV-fs5"/>
                                     <constraint firstItem="Zb5-z5-o49" firstAttribute="width" secondItem="vQX-4f-FDi" secondAttribute="width" id="vMH-bB-FxD"/>
                                 </constraints>
                             </view>

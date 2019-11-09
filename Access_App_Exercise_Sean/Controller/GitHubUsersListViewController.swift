@@ -16,12 +16,12 @@ class GitHubUsersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTableView()
-        
         callAPIToFetchGitHubAllUsers()
     }
-    
+}
+
+// MARK: - > API
+private extension GitHubUsersListViewController {
     func callAPIToFetchGitHubAllUsers() {
         HUD.show(.progress, onView: view)
         gitHubUserListViewModel.fetchAllUsers { [weak self] (errorMessage) in
@@ -34,16 +34,7 @@ class GitHubUsersListViewController: UIViewController {
             self?.tableView.reloadData()
         }
     }
-    func setupViewModel() {
-        // TODO
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO
-    }
-
 }
-
 // MARK: - > TABLEVIEW
 extension GitHubUsersListViewController {
     func cellId() -> String {
@@ -55,8 +46,6 @@ extension GitHubUsersListViewController {
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 100.0
-        tableView.rowHeight = UITableView.automaticDimension
     }
 }
 extension GitHubUsersListViewController: UITableViewDelegate {
