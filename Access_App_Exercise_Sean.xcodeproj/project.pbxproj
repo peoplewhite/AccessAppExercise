@@ -69,15 +69,47 @@
 			children = (
 				201D0AE3237650C700B4200F /* AppDelegate.swift */,
 				201D0AE5237650C700B4200F /* SceneDelegate.swift */,
-				201D0AE7237650C700B4200F /* GitHubUsersListViewController.swift */,
-				20F7B42923765DDE008C781B /* GitHubUser.swift */,
-				20F7B427237659E4008C781B /* GitHubUsersListCell.xib */,
-				201D0AE9237650C700B4200F /* Main.storyboard */,
+				20F7B42B23765EA5008C781B /* Model */,
+				20F7B42C23765EB1008C781B /* View */,
+				20F7B42D23765ED4008C781B /* View Model */,
+				20F7B42E23765EDF008C781B /* Controller */,
 				201D0AEC237650C900B4200F /* Assets.xcassets */,
-				201D0AEE237650C900B4200F /* LaunchScreen.storyboard */,
 				201D0AF1237650C900B4200F /* Info.plist */,
 			);
 			path = Access_App_Exercise_Sean;
+			sourceTree = "<group>";
+		};
+		20F7B42B23765EA5008C781B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20F7B42923765DDE008C781B /* GitHubUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20F7B42C23765EB1008C781B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20F7B427237659E4008C781B /* GitHubUsersListCell.xib */,
+				201D0AE9237650C700B4200F /* Main.storyboard */,
+				201D0AEE237650C900B4200F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20F7B42D23765ED4008C781B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		20F7B42E23765EDF008C781B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				201D0AE7237650C700B4200F /* GitHubUsersListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		9E9B13C0A7AB4AFC3B4268C5 /* Pods */ = {
