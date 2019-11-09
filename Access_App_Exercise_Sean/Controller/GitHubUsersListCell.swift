@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import DynamicColor
 
 class GitHubUsersListCell: UITableViewCell {
 
@@ -24,6 +25,7 @@ class GitHubUsersListCell: UITableViewCell {
             nameLabel.text = _user.login
             
 //            setupJobTitle(title: _user.jobTitle)
+            setupAvatarCircularShaped()
         }
     }
     @IBOutlet private weak var avatar: UIImageView!
@@ -32,12 +34,22 @@ class GitHubUsersListCell: UITableViewCell {
     @IBOutlet private weak var jobTitleLabelTopDistanceConstraint: NSLayoutConstraint!
     @IBOutlet private weak var jobTitleLabelHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var wrapper: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupAvatarCircularShaped()
+        
+        wrapper.layer.borderColor = DynamicColor(hex: 0xECECEC).cgColor // ECECEC
+        wrapper.layer.borderWidth = 2.0
+        wrapper.layer.masksToBounds = false
+//        wrapper.layer.shadowColor = DynamicColor(hex: 0xF3F3F3).cgColor
+        wrapper.layer.shadowColor = UIColor.black.cgColor
+        wrapper.layer.shadowOpacity = 0.5
+        wrapper.layer.shadowOffset = CGSize(width: -1, height: 2)
     }
     func setupAvatarCircularShaped() {
-        avatar.layer.cornerRadius = avatar.frame.height / 2.0
+        avatar.layer.cornerRadius = 70.0 / 2.0
+        avatar.clipsToBounds = true
     }
     func setupModel(user: GitHubUser) {
         self.user = user
