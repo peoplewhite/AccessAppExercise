@@ -18,6 +18,7 @@
 		20F7B43023765F9F008C781B /* GitHubUsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B42F23765F9F008C781B /* GitHubUsersListViewModel.swift */; };
 		20F7B43223766033008C781B /* GitHubUsersListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B43123766033008C781B /* GitHubUsersListCellViewModel.swift */; };
 		20F7B43423766501008C781B /* GitHubUsersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B43323766501008C781B /* GitHubUsersListCell.swift */; };
+		20F7B43623767321008C781B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7B43523767321008C781B /* APIManager.swift */; };
 		9101B8798B6810251AC6F2DB /* Pods_Access_App_Exercise_Sean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05B416F8A5D4AF64B5E651D /* Pods_Access_App_Exercise_Sean.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		20F7B42F23765F9F008C781B /* GitHubUsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersListViewModel.swift; sourceTree = "<group>"; };
 		20F7B43123766033008C781B /* GitHubUsersListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersListCellViewModel.swift; sourceTree = "<group>"; };
 		20F7B43323766501008C781B /* GitHubUsersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersListCell.swift; sourceTree = "<group>"; };
+		20F7B43523767321008C781B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		35A849F92A065E49CFD6C9D3 /* Pods-Access_App_Exercise_Sean.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Access_App_Exercise_Sean.debug.xcconfig"; path = "Target Support Files/Pods-Access_App_Exercise_Sean/Pods-Access_App_Exercise_Sean.debug.xcconfig"; sourceTree = "<group>"; };
 		63DA3078585095AF50F0A25B /* Pods-Access_App_Exercise_Sean.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Access_App_Exercise_Sean.release.xcconfig"; path = "Target Support Files/Pods-Access_App_Exercise_Sean/Pods-Access_App_Exercise_Sean.release.xcconfig"; sourceTree = "<group>"; };
 		E05B416F8A5D4AF64B5E651D /* Pods_Access_App_Exercise_Sean.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Access_App_Exercise_Sean.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				20F7B42E23765EDF008C781B /* Controller */,
 				201D0AEC237650C900B4200F /* Assets.xcassets */,
 				201D0AF1237650C900B4200F /* Info.plist */,
+				20F7B43523767321008C781B /* APIManager.swift */,
 			);
 			path = Access_App_Exercise_Sean;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F7B43623767321008C781B /* APIManager.swift in Sources */,
 				201D0AE8237650C700B4200F /* GitHubUsersListViewController.swift in Sources */,
 				20F7B42A23765DDE008C781B /* GitHubUser.swift in Sources */,
 				201D0AE4237650C700B4200F /* AppDelegate.swift in Sources */,

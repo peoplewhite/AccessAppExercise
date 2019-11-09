@@ -11,15 +11,21 @@ import UIKit
 class GitHubUsersListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var gitHubUserListViewModel: GitHubUsersListViewModel?
-    
+    let gitHubUserListViewModel: GitHubUsersListViewModel = GitHubUsersListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
+        
+        callAPIToFetchGitHubAllUsers()
     }
     
+    func callAPIToFetchGitHubAllUsers() {
+        gitHubUserListViewModel.fetchAllUsers { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
     func setupViewModel() {
         // TODO
     }
@@ -53,21 +59,18 @@ extension GitHubUsersListViewController: UITableViewDelegate {
 extension GitHubUsersListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let viewModel = gitHubUserListViewModel else { return 0 }
-        return viewModel.users.count
+        return gitHubUserListViewModel.users.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let viewModel = gitHubUserListViewModel else {
-            return UITableViewCell()
-        }
-        guard !viewModel.users.isEmpty else {
+
+        guard !gitHubUserListViewModel.users.isEmpty else {
             return UITableViewCell()
         }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId()) as? GitHubUsersListCell else {
             return UITableViewCell()
         }
         
-        cell.setupModel(user: viewModel.users[indexPath.row])
+        cell.setupModel(user: gitHubUserListViewModel.users[indexPath.row])
 
         return cell
     }

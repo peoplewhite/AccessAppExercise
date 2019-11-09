@@ -21,9 +21,9 @@ class GitHubUsersListCell: UITableViewCell {
                 avatar.image = nil
             }
 
-            nameLabel.text = _user.name
+            nameLabel.text = _user.login
             
-            setupJobTitle(title: _user.jobTitle)
+//            setupJobTitle(title: _user.jobTitle)
         }
     }
     @IBOutlet private weak var avatar: UIImageView!
