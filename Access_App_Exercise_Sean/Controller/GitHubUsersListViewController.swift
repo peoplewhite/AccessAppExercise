@@ -16,6 +16,7 @@ class GitHubUsersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         callAPIToFetchGitHubAllUsers()
     }
 }
