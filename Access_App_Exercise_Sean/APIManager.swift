@@ -34,7 +34,7 @@ extension API {
     static func fetchGitHubAllUsers(succeed: @escaping ((_ users: [GitHubUser]) -> Void), failure: @escaping failure) {
         let url = APIAction.fetchGitHubAllUser.url
         
-        Alamofire.request(url, method: .get)
+        AF.request(url, method: .get)
             .validate(statusCode: 200..<299)
             .responseJSON { response in
                 switch response.result {
