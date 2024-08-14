@@ -22,6 +22,7 @@ struct GitHubUsersListView: View {
             } else {
                 ForEach(viewModel.users) { user in
                     GitHubUserListCell(user: user)
+                        .listRowInsets(EdgeInsets(top: 6, leading: 2, bottom: 0, trailing: 2))
                 }
             }
         }
