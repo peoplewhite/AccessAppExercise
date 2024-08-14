@@ -32,7 +32,7 @@ struct GitHubUser: Codable, Identifiable {
                 "id": 1,
                 "avatar_url": "https://example.com/avatar.jpg",
                 "login": "mockUser",
-                "site_admin": false
+                "site_admin": true
             ])
         )
     }
