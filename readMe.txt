@@ -1,22 +1,38 @@
+# GitHub Users App
 
-# M
-    * GitHubUser.swift
-        * model file for showing GitHub user profile
-        * i created minimum 3 properties only for this exercise
-        * i using SwiftyJSON lib to convert json to instance of model
-# V
-    * GitHubUsersListCell.xib
-        * view for showing cell
-    * Main.storyboard
-        * contains view of GitHubUsersListViewController
-# VM
-    * GitHubUsersListViewModel.swift
-        * do one job to call api to fetch all user from github api
-        * then, return to property "users" in this view-model
-        * then, using closure to notice vc whose using this view-model to update users data
-# C
-    * GitHubUsersListViewController.swift
-        * only responsibility is to setup tableview
-        * make sure data from view-model after fetching will be rendered on cell
-    * GitHubUsersListCell.swift
-        * to setup UI of this cell, and bring data to related components
+This iOS app displays a list of GitHub users using the GitHub API. It follows the MVVM (Model-View-ViewModel) architecture pattern.
+
+## Architecture
+
+### Model (M)
+- GitHubUser.swift
+  - Model file for representing a GitHub user profile
+  - Contains minimum 3 properties for this exercise
+  - Uses SwiftyJSON library to convert JSON to model instances
+
+### View (V)
+- GitHubUserListCell.swift
+  - Swift file for the cell UI setup and data binding
+- GitHubUsersListView.swift
+  - SwiftUI view for displaying the list of GitHub users
+
+### ViewModel (VM)
+- GitHubUsersListViewModel.swift
+  - Responsible for fetching all users from the GitHub API
+  - Stores fetched users in the "users" property
+  - Uses closures to notify the view when data is updated
+
+### Other Components
+- APIManager.swift
+  - Handles API requests and responses
+
+## Dependencies
+- Alamofire: HTTP networking library
+- Moya: Network abstraction layer
+- SwiftyJSON: JSON parsing
+- PKHUD: Progress HUD
+- DynamicColor: Color manipulation
+- SDWebImageSwiftUI: Asynchronous image loading and caching
+
+## Minimum iOS Version
+iOS 13.0
