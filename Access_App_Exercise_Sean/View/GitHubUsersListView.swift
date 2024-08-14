@@ -12,7 +12,6 @@ import PKHUD
 struct GitHubUsersListView: View {
     @ObservedObject private var viewModel = GitHubUsersListViewModel()
 
-
     var body: some View {
         List {
             if viewModel.isLoading {
@@ -22,11 +21,11 @@ struct GitHubUsersListView: View {
                     .foregroundColor(.red)
             } else {
                 ForEach(viewModel.users) { user in
-                    GitHubUserListCell2(user: user)
+                    GitHubUserListCell(user: user)
                 }
             }
         }
-        .listStyle(PlainListStyle())
+        .listStyle(PlainListStyle())        
         .onAppear {
             callAPIToFetchGitHubAllUsers()
         }

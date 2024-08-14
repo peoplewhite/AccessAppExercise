@@ -9,7 +9,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-struct GitHubUserListCell2: View {
+struct GitHubUserListCell: View {
     let user: GitHubUser
     
     var body: some View {
@@ -53,5 +53,5 @@ struct GitHubUserListCell2: View {
 }
 
 #Preview {
-    GitHubUserListCell2(user: GitHubUser.mock())
+    GitHubUserListCell(user: GitHubUser.mock())
 }

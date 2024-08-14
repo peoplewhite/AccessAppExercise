@@ -26,6 +26,7 @@ struct GitHubUser: Codable, Identifiable {
         self.isSiteAdmin = json["site_admin"].boolValue
     }
     
+    // for canvas only
     static func mock() -> GitHubUser {
         return GitHubUser(
             json: JSON([
