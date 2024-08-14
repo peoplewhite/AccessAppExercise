@@ -8,15 +8,22 @@
 
 import Foundation
 
-class GitHubUsersListViewModel {
+class GitHubUsersListViewModel: ObservableObject {
     
-    var users: [GitHubUser] = []
+    @Published var users: [GitHubUser] = []
+    @Published var isLoading = false
+    @Published var errorMessage: String?
         
     func fetchAllUsers(completion: @escaping (_ errorMessage: String?) -> (Void)) {
+        isLoading = true
+        errorMessage = nil
         API.fetchGitHubAllUsers(succeed: { (users) in
             self.users = users
+            self.isLoading = false
             completion(nil)
         }) { (errorMessage) in
+            self.isLoading = false
+            self.errorMessage = errorMessage
             completion(errorMessage)
         }
     }
