@@ -1,41 +1,45 @@
 PODS:
   - Alamofire (5.9.1)
   - DynamicColor (4.2.0)
-  - Kingfisher (5.9.0):
-    - Kingfisher/Core (= 5.9.0)
-  - Kingfisher/Core (5.9.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - PKHUD (5.3.0)
+  - SDWebImage (5.19.6):
+    - SDWebImage/Core (= 5.19.6)
+  - SDWebImage/Core (5.19.6)
+  - SDWebImageSwiftUI (2.2.7):
+    - SDWebImage (~> 5.10)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
   - DynamicColor (~> 4.2.0)
-  - Kingfisher
   - Moya
   - PKHUD (~> 5.0)
+  - SDWebImageSwiftUI
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - DynamicColor
-    - Kingfisher
     - Moya
     - PKHUD
+    - SDWebImage
+    - SDWebImageSwiftUI
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   DynamicColor: c475f66bda1cabf602f2c54ac1171c0c07148a5a
-  Kingfisher: ff98240aebb7302bdc4f1ecd701761030ce18b16
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SDWebImage: a79252b60f4678812d94316c91da69ec83089c9f
+  SDWebImageSwiftUI: 65a2c8b4b0d9577f2e11556cb163cc4613b9ee54
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 866e927f72ea2e36713c56cf618d15300867a6c4
+PODFILE CHECKSUM: 70c9ac4b4ee50fc51dcbf2a294e49f1c0a579116
 
 COCOAPODS: 1.15.2
