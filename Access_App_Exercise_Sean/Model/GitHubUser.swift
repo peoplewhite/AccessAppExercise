@@ -9,7 +9,8 @@
 import Foundation
 import SwiftyJSON
 
-struct GitHubUser {
+struct GitHubUser: Codable, Identifiable {
+    let id: Int
     let avatarUrlString: String
     let login: String
     let isSiteAdmin: Bool
@@ -19,8 +20,20 @@ struct GitHubUser {
     }
     
     init(json: JSON) {
+        self.id = json["id"].intValue
         self.avatarUrlString = json["avatar_url"].stringValue
         self.login = json["login"].stringValue
         self.isSiteAdmin = json["site_admin"].boolValue
+    }
+    
+    static func mock() -> GitHubUser {
+        return GitHubUser(
+            json: JSON([
+                "id": 1,
+                "avatar_url": "https://example.com/avatar.jpg",
+                "login": "mockUser",
+                "site_admin": false
+            ])
+        )
     }
 }

@@ -7,10 +7,40 @@
 //
 
 import SwiftUI
+import PKHUD
 
 struct GitHubUsersListView: View {
+    @ObservedObject private var viewModel = GitHubUsersListViewModel()
+
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            if viewModel.isLoading {
+                EmptyView()
+            } else if let error = viewModel.errorMessage {
+                Text(error)
+                    .foregroundColor(.red)
+            } else {
+                ForEach(viewModel.users) { user in
+                    GitHubUserListCell2(user: user)
+                }
+            }
+        }
+        .listStyle(PlainListStyle())
+        .onAppear {
+            callAPIToFetchGitHubAllUsers()
+        }
+    }
+
+    private func callAPIToFetchGitHubAllUsers() {
+        HUD.show(.progress)
+        viewModel.fetchAllUsers { errorMessage in
+            if let _ = errorMessage {
+                HUD.flash(.error)
+            } else {
+                HUD.hide()
+            }
+        }
     }
 }
 
